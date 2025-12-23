@@ -60,4 +60,4 @@ async def letter(interaction: discord.Interaction, text:str, font:str):
         await interaction.response.send_message("There was a very jolly issue!! Ho ho ho!")
 
 
-client.run('MTQ1MzAyMjk1NzgyMjU0NjAyMA.GbWD4r.vOvlmQxOST7Y4HOvMyKbfElnsQxDpTRFzE5urk')
+client.run('add your token here')
