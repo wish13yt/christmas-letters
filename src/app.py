@@ -33,7 +33,9 @@ async def on_message(message):
 @client.tree.command()
 async def info(interaction: discord.Interaction):
     """Information about licenses used by this bot and the bot itself."""
-    await interaction.response.send_message("Jolly Christmas Bot\n Jolly Christmas Bot (JCB) is open-source under the Unlicense on GitHub as wish13yt/christmas-letters. Fonts used are licensed under the SIL Open Font License, and were retreived from Google Fonts.\n The bot's profile picture is the Christmas Tree emoji, from the Noto Emoji Set that uses the Open Font License.\n You can read the OFL here: https://openfontlicense.org and the Unlicense here: https://unlicense.org/. Thank you for using JCB!")
+    with open("info.txt", "r") as file:
+        infofr = file.read()
+    await interaction.response.send_message(infofr)
 
 @client.tree.command()
 @app_commands.describe(
