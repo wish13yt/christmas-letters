@@ -6,6 +6,8 @@ from discord import app_commands
 
 intents = discord.Intents.default()
 intents.message_content = True
+with open("token.txt", "r") as file:
+    token = file.read()
 
 class MyClient(discord.Client):
     def __init__(self, *, intents: discord.Intents):
@@ -60,4 +62,5 @@ async def letter(interaction: discord.Interaction, text:str, font:str):
         await interaction.response.send_message("There was a very jolly issue!! Ho ho ho!")
 
 
-client.run('add your token here')
+# make a token.txt with setup.py 
+client.run(token)
